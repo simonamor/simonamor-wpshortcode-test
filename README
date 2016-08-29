@@ -1,0 +1,17 @@
+
+Add the following shortcode text to a page, you should have 6 values output.
+
+[simonamor_test abc1="Abc One" def1="Def One" ghi1="Ghi One" abc2="Abc Two" def2="Def Two" ghi2="Ghi Two" ]
+
+You would expect 6 values to appear in the output and you do. However, if you split the line (in Text mode rather than Visual) so that it's more readable then strange things happen.
+
+[simonamor_test
+    abc1="Abc One" def1="Def One" ghi1="Ghi One"
+    abc2="Abc Two" def2="Def Two" ghi2="Ghi Two"
+]
+
+You would expect 6 values to appear, same as before but ghi1 and ghi2 show up as blank (the default values).
+If you move the ] onto the line above, ghi2 then has a value, but ghi1 still doesn't!
+
+Is this a bug, a feature, or am I implementing shortcodes the wrong way?
+
